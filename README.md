@@ -85,14 +85,20 @@ brew cask install pycharm
 ```
 
 ## Git
+```
 brew install git
+```
 
 ## Tmux
+```
 brew install tmux
+```
 
 ## ZSH
+```
 brew install zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 ## dotfiles
 ```
@@ -100,20 +106,28 @@ brew install rcm
 ./.dotfiles/install.sh
 ```
 
-# nvm
+## nvm
+```
 echo "You might want to check for a newer version of nvm."
 echo "About to install v0.35.3..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm install --lts
+```
 
 ## Yarn
+```
 brew install yarn
+```
 
 ## Typescript - tsc
+```
 yarn global add typescript
+```
 
 ## eslint
+```
 yarn global add eslint
+```
 
 ## Powerline status bar
 ```
@@ -143,4 +157,6 @@ java -version
 ```
 
 ## Things 3
+```
 mas install 904280696
+```
