@@ -2,23 +2,26 @@
 
 ## Homebrew
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/joel/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 ```
 
 ## iTerm2
 ```
-brew cask install iterm2
+brew install iterm2 --cask
 ```
 
 ## Alfred
 ```
-brew cask install alfred
+brew install alfred --cask
 ```
 
 ## Slack
 ```
-brew cask install slack
+brew install slack --cask
 ```
 
 ## Mas - Apple Store app installs
@@ -28,38 +31,39 @@ brew install mas
 
 ## Browsers
 ```
-brew cask install google-chrome
-brew cask install brave-browser
-brew cask install firefox
+brew install google-chrome --cask
+brew install brave-browser --cask
+brew install firefox --cask
 ```
-## Amazon photos
+
+## Amazon photos (not used)
 ```
-brew cask install amazon-photos
+# brew install amazon-photos --cask
 ```
 
 ## Spotify
 ```
-brew cask install spotify
+brew install spotify --cask 
 ```
 
 ## Postman
 ```
-brew cask install postman
+brew install postman --cask
 ```
 
-## Microsoft Office
+## Microsoft Office (not used)
 ```
-brew cask install microsoft-office
+# brew install microsoft-office --cask
 ```
 
 ## Zoom
 ```
-brew cask install zoomus
+brew install zoomus --cask
 ```
 
 ## VS Code
 ```
-brew cask install visual-studio-code
+brew install visual-studio-code --cask
 ```
 
 ## Terminal utilties
@@ -71,7 +75,7 @@ brew install wget
 
 ## Charles Proxy
 ```
-brew cask install charles
+# brew install charles --cask
 ```
 
 ## Python3
@@ -79,11 +83,12 @@ brew cask install charles
 brew install python3
 ```
 
-## Pycharm
+## Pycharm (no used)
 ```
-brew cask install pycharm
+# brew install pycharm --cask
 ```
 
+# ***** CLI Tools ***** #
 ## Git
 ```
 brew install git
@@ -94,23 +99,41 @@ brew install git
 brew install tmux
 ```
 
+## fzf
+```
+brew install fzf     # https://github.com/junegunn/fzf?tab=readme-ov-file#using-homebrew 
+brew install bat     # https://github.com/sharkdp/bat?tab=readme-ov-file#on-macos-or-linux-via-homebrew
+# brew install exa     # https://the.exa.website/ # disabled by homebrew as "not maintained upstream"
+brew install zoxide  # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
+```
+
 ## ZSH
 ```
-brew install zsh-completions zsh-syntax-highlighting zsh-autosuggestions
+brew install zsh-completions
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
+# brew install zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ## dotfiles
 ```
+PREVIOUS=${PWD}
+cd
+git clone git@github.com:ramosjoel/dotfiles.git
+mv dotfiles .dotfiles
+cd $PREVIOUS
 brew install rcm
-./.dotfiles/install.sh
+cd
+rcup
+cd $PREVIOUS
 ```
 
 ## nvm
 ```
 echo "You might want to check for a newer version of nvm."
-echo "About to install v0.35.3..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+echo "About to install v0.39.7..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 nvm install --lts
 ```
 
@@ -133,26 +156,35 @@ yarn global add eslint
 ```
 # install powerline status bar
 pip3 install powerline-status
+```
 
-# install fonts
+## Install fonts
+```
 git clone git@github.com:powerline/fonts.git
 cd fonts
 ./install.sh
+cd ..
+rm -rf fonts
+```
 
-# add powerline status bar to ZSH
+## add powerline status bar to ZSH
+```
+PREVIOUS=${PWD}
 powerline_root=$(pip3 show powerline-status | grep Location | awk '{print $2}')
+echo "powerline stuff should be in ${powerline_root}"
 # . ${powerline_root}/powerline/bindings/zsh/powerline.zsh
-# add powerline status bar to tmux
-echo "source ${powerline_root}/powerline/bindings/tmux/powerline.conf" >> .tmux.conf
-echo "# ZSH - start tmux when launching iterm windows" >> .zshrc
-echo "ZSH_TMUX_AUTOSTART=true" >> .zshrc
+# [THE BELOW SHOULD NOT BE NEEDED SINCE DOTFILES ARE IN VERSION CONTROL] add powerline status bar to tmux
+# echo "source ${powerline_root}/powerline/bindings/tmux/powerline.conf" >> ~/.tmux.conf
+# echo "# ZSH - start tmux when launching iterm windows" >> ~/.zshrc
+# echo "ZSH_TMUX_AUTOSTART=true" >> ~/.zshrc
+cd $PREVIOUS
 ```
 
 ## Java
 ```
 brew tap adoptopenjdk/openjdk
 # run brew search jdk to see available jdks
-brew cask install adoptopenjdk14
+brew install adoptopenjdk14 --cask
 java -version
 ```
 
@@ -160,3 +192,12 @@ java -version
 ```
 mas install 904280696
 ```
+
+## Neovim
+```
+xcode-select --install
+brew install --HEAD tree-sitter
+brew install --HEAD luajit
+brew install --HEAD neovim
+```
+
