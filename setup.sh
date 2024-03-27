@@ -131,3 +131,27 @@ brew install --HEAD tree-sitter
 brew install --HEAD luajit
 brew install --HEAD neovim
 
+if [[ $(uname) == 'arm64' ]]; then
+  echo "Looks like we are on an Mac with an Apple silicon chip."
+  echo "Installing rosetta..."
+  softwareupdate --install-rosetta
+fi
+
+# Docker desktop
+# Download dmg
+DOCKER_DMG_URL=$(curl https://docs.docker.com/desktop/release-notes/ | \
+  grep Docker\.dmg | \
+  head -1 | \
+  sed 's/.*href=//p' | \
+  sed s'/>.*//p' | head -1)
+curl $DOCKER_DMG_URL -o Docker.dmg
+
+sudo hdiutil attach Docker.dmg
+sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --accept-license --user="${USER}"
+sudo hdiutil detach /Volumes/Docker
+
+## iTerm2 Themes (https://iterm2colorschemes.com/)
+## This just downloads the theme.
+## Open iTerm and go to Profiles > Colors, and import the Color Presets... dropdown to import the downloaded file.
+curl https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/GitHub%20Dark.itermcolors -o GitHub-Dark.itermcolors
+
