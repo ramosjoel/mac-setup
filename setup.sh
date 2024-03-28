@@ -95,8 +95,8 @@ yarn global add typescript
 yarn global add eslint
 
 ## Powerline status bar
-# install powerline status bar
-pip3 install powerline-status
+# adding --break-system-packages since powerline should not break anything about the system python.
+pip3 install powerline-status --break-system-packages
 
 # install fonts
 git clone git@github.com:powerline/fonts.git
