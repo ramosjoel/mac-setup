@@ -155,7 +155,7 @@ yarn global add eslint
 ## Powerline status bar
 ```
 # install powerline status bar
-pip3 install powerline-status
+pip3 install powerline-status --break-system-packages
 ```
 
 ## Install fonts
