@@ -104,6 +104,7 @@ brew install tmux
 brew install fzf     # https://github.com/junegunn/fzf?tab=readme-ov-file#using-homebrew 
 brew install bat     # https://github.com/sharkdp/bat?tab=readme-ov-file#on-macos-or-linux-via-homebrew
 # brew install exa     # https://the.exa.website/ # disabled by homebrew as "not maintained upstream"
+brew install lsd     # https://github.com/lsd-rs/lsd
 brew install zoxide  # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 ```
 
