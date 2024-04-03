@@ -1,6 +1,8 @@
 # Mac Setup
 
-## Homebrew
+## Suggested
+
+### Homebrew
 ```
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -9,97 +11,97 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 ```
 
-## iTerm2
+### iTerm2
 ```
 brew install iterm2 --cask
 ```
 
-## Alfred
+### Alfred
 ```
 brew install alfred --cask
 ```
 
-## Slack
+### Slack
 ```
 brew install slack --cask
 ```
 
-## Mas - Apple Store app installs
+### Mas - Apple Store app installs
 ```
 brew install mas
 ```
 
-## Browsers
+### Browsers
 ```
 brew install google-chrome --cask
 brew install brave-browser --cask
 brew install firefox --cask
 ```
 
-## Amazon photos (not used)
+### Amazon photos (not used)
 ```
 # brew install amazon-photos --cask
 ```
 
-## Spotify
+### Spotify
 ```
 brew install spotify --cask 
 ```
 
-## Postman
+### Postman
 ```
 brew install postman --cask
 ```
 
-## Microsoft Office (not used)
+### Microsoft Office (not used)
 ```
 # brew install microsoft-office --cask
 ```
 
-## Zoom
+### Zoom
 ```
 brew install zoomus --cask
 ```
 
-## VS Code
+### VS Code
 ```
 brew install visual-studio-code --cask
 ```
 
-## Terminal utilties
+### Terminal utilties
 ```
 brew install jq
 brew install tree
 brew install wget
 ```
 
-## Charles Proxy
+### Charles Proxy
 ```
 # brew install charles --cask
 ```
 
-## Python3
+### Python3
 ```
 brew install python3
 ```
 
-## Pycharm (no used)
+### Pycharm (no used)
 ```
 # brew install pycharm --cask
 ```
 
 # ***** CLI Tools ***** #
-## Git
+### Git
 ```
 brew install git
 ```
 
-## Tmux
+### Tmux
 ```
 brew install tmux
 ```
 
-## fzf
+### fzf
 ```
 brew install fzf     # https://github.com/junegunn/fzf?tab=readme-ov-file#using-homebrew 
 brew install bat     # https://github.com/sharkdp/bat?tab=readme-ov-file#on-macos-or-linux-via-homebrew
@@ -108,7 +110,7 @@ brew install lsd     # https://github.com/lsd-rs/lsd
 brew install zoxide  # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 ```
 
-## ZSH
+### ZSH
 ```
 brew install zsh-completions
 brew install zsh-autosuggestions
@@ -117,7 +119,7 @@ brew install zsh-syntax-highlighting
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-## dotfiles
+### dotfiles
 ```
 PREVIOUS=${PWD}
 cd
@@ -130,7 +132,7 @@ rcup
 cd $PREVIOUS
 ```
 
-## nvm
+### nvm
 ```
 echo "You might want to check for a newer version of nvm."
 echo "About to install v0.39.7..."
@@ -138,28 +140,28 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 nvm install --lts
 ```
 
-## Yarn
+### Yarn
 ```
 brew install yarn
 ```
 
-## Typescript - tsc
+### Typescript - tsc
 ```
 yarn global add typescript
 ```
 
-## eslint
+### eslint
 ```
 yarn global add eslint
 ```
 
-## Powerline status bar
+### Powerline status bar
 ```
 # install powerline status bar
 pip3 install powerline-status --break-system-packages
 ```
 
-## Install fonts
+### Install fonts
 ```
 git clone git@github.com:powerline/fonts.git
 cd fonts
@@ -168,7 +170,7 @@ cd ..
 rm -rf fonts
 ```
 
-## add powerline status bar to ZSH
+### add powerline status bar to ZSH
 ```
 PREVIOUS=${PWD}
 powerline_root=$(pip3 show powerline-status | grep Location | awk '{print $2}')
@@ -181,7 +183,7 @@ echo "powerline stuff should be in ${powerline_root}"
 cd $PREVIOUS
 ```
 
-## Java
+### Java
 ```
 brew tap adoptopenjdk/openjdk
 # run brew search jdk to see available jdks
@@ -189,12 +191,12 @@ brew install adoptopenjdk14 --cask
 java -version
 ```
 
-## Things 3
+### Things 3
 ```
 mas install 904280696
 ```
 
-## Neovim
+### Neovim
 ```
 xcode-select --install
 brew install --HEAD tree-sitter
@@ -202,7 +204,34 @@ brew install --HEAD luajit
 brew install --HEAD neovim
 ```
 
-## Kubernetes (k8s)
+## OPTIONAL
+Comment these out if they aren't needed
+
+### Kubernetes (k8s)
 ```
 brew install kubectl
+brew install helm
+```
+
+```
+brew install tilt   # (https://docs.tilt.dev/) Tool for managing Kubernetes environments.
+brew install kind   # (https://kind.sigs.k8s.io/) Tool for running local Kubernetes clusters.
+brew install ctlptl # (https://github.com/tilt-dev/ctlptl/blob/main/docs/ctlptl.md) Tool for managing k8s clusters.
+```
+
+### gRPC
+```
+brew install grpcurl
+```
+
+### AWS
+```
+brew install awscli
+```
+
+### AWS LocalStack
+```
+brew install localstack/tap/localstack-cli # (https://github.com/localstack/localstack) 
+# provides the awslocal command, which is a thin wrapper around the aws command line interface for use with LocalStack.
+brew install awscli-local # (https://github.com/localstack/awscli-local?tab=readme-ov-file)
 ```

@@ -158,4 +158,20 @@ curl https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/sch
 
 ## Kubernetes (k8s)
 brew install kubectl
+brew install helm
+
+brew install tilt   # (https://docs.tilt.dev/) Tool for managing Kubernetes environments.
+brew install kind   # (https://kind.sigs.k8s.io/) Tool for running local Kubernetes clusters.
+brew install ctlptl # (https://github.com/tilt-dev/ctlptl/blob/main/docs/ctlptl.md) Tool for managing k8s clusters.
+
+## gRPC
+brew install grpcurl
+
+## AWS
+brew install awscli
+
+## AWS LocalStack
+brew install localstack/tap/localstack-cli # (https://github.com/localstack/localstack) 
+# provides the awslocal command, which is a thin wrapper around the aws command line interface for use with LocalStack.
+brew install awscli-local # (https://github.com/localstack/awscli-local?tab=readme-ov-file)
 
