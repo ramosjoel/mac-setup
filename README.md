@@ -16,6 +16,11 @@ brew update
 brew install iterm2 --cask
 ```
 
+### Rectangle (window management)
+```
+brew install rectangle --cask 
+```
+
 ### Alfred
 ```
 brew install alfred --cask
