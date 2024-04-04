@@ -240,3 +240,8 @@ brew install localstack/tap/localstack-cli # (https://github.com/localstack/loca
 # provides the awslocal command, which is a thin wrapper around the aws command line interface for use with LocalStack.
 brew install awscli-local # (https://github.com/localstack/awscli-local?tab=readme-ov-file)
 ```
+
+### Protobuf
+```
+brew install protobuf
+```
