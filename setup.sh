@@ -93,7 +93,7 @@ nvm install --lts
 brew install yarn
 
 ## Typescript - tsc
-yarn global add typescript
+brew install typescript
 
 ## eslint
 yarn global add eslint
