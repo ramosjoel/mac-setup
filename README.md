@@ -152,7 +152,7 @@ brew install yarn
 
 ### Typescript - tsc
 ```
-yarn global add typescript
+brew install typescript
 ```
 
 ### eslint
