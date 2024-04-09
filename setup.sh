@@ -180,3 +180,6 @@ brew install awscli-local # (https://github.com/localstack/awscli-local?tab=read
 
 ## Proto
 brew install protobuf
+
+## Xcodes (not Xcode)
+brew install xcodes --cask
