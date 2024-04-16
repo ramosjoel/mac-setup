@@ -250,3 +250,8 @@ brew install protobuf
 ```
 brew install xcodes --cask
 ```
+
+### Android Studio
+```
+brew install android-studio --cask
+```
