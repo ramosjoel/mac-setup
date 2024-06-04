@@ -170,6 +170,9 @@ brew install ctlptl # (https://github.com/tilt-dev/ctlptl/blob/main/docs/ctlptl.
 ## gRPC
 brew install grpcurl
 
+## HTTP
+brew install bruno
+
 ## AWS
 brew install awscli
 

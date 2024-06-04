@@ -229,6 +229,12 @@ brew install ctlptl # (https://github.com/tilt-dev/ctlptl/blob/main/docs/ctlptl.
 brew install grpcurl
 ```
 
+### HTTP
+Git-based offline and open-source desktop HTTP client for making HTTP requests.
+```
+brew install bruno
+```
+
 ### AWS
 ```
 brew install awscli
