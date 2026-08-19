@@ -1,59 +1,102 @@
 
+# ----- TERMINALS ----- #
 ## iTerm2
 brew install iterm2 --cask
+# https://ghostty.org/
+brew install ghostty --cask
 
-## Rectangle (window management)
-brew install rectangle --cask 
 
-## Alfred
-brew install alfred --cask
+# ----- WINDOW MANAGEMENT ----- #
+## Rectangle (window management) (deprecated)
+# Using Raycast for this
+# brew install rectangle --cask 
 
+
+# ----- SPOTLIGHT REPLACEMNT ----- #
+## Alfred (deprecated)
+# brew install alfred --cask
+
+## Raycast (replacing Alfred)
+brew install raycast --cask
+
+
+# ----- MESSAGING ----- #
 ## Slack
 brew install slack --cask
 
+
+# ----- APPLE STORE APPS ----- #
 ## Mas - Apple Store app installs
 brew install mas
 
-## Browsers
+
+# ----- BROWSERS ----- #
 brew install google-chrome --cask
 brew install brave-browser --cask
 brew install firefox --cask
 
+
+# ----- PHOTOS MANAGEMENT / STORAGE ----- #
 ## Amazon photos (not used)
 # brew install amazon-photos --cask
 
-## Spotify
-brew install spotify --cask 
 
+# ----- MUSIC ----- #
+## Spotify
+brew install spotify --cask
+
+
+# ----- API TOOLS ----- #
 ## Postman
 brew install postman --cask
-
-## Microsoft Office (not used)
-# brew install microsoft-office --cask
-
-## Zoom
-brew install zoomus --cask
-
-## VS Code
-brew install visual-studio-code --cask
-
-## Terminal utilties
-brew install jq
-brew install tree
-brew install wget
 
 ## Charles Proxy
 # brew install charles --cask
 
-## Python3
+## Mitmproxy
+brew install mitmproxy
+
+## Proxyman
+## https://proxyman.com/download
+## wget https://proxyman.com/release/osx/Proxyman_latest.dmg -o ~/Downloads/Proxyman_latest.dmg
+
+
+# ----- OFFICE APPS ----- #
+## Microsoft Office (not used)
+# brew install microsoft-office --cask
+
+
+# ----- CONFERENCE CALL APPS ----- #
+## Zoom
+brew install zoomus --cask
+
+# ----- PYTHON3 ----- #
 brew install python3
+# Install uv python package installer
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-## Pycharm (no used)
-# brew install pycharm --cask
+# ----- TERMINAL UTILTIES ----- #
+# JSON utility
+brew install jq
+# Yaml utility
+brew install yq
+# Folder-structure viewer (replacing with lsd)
+brew install tree
+# curl alternative
+brew install wget
+# File finder
+brew install lf
+# Disk usage viewer
+brew install dust
+# Process viewer
+brew install glances
+brew install tree-sitter
 
-# ***** CLI Tools ***** #
 ## Git
 brew install git
+brew install gpg
+brew install lazygit
+brew install git-delta
 
 ## Tmux
 brew install tmux
@@ -126,8 +169,17 @@ brew tap adoptopenjdk/openjdk
 brew install adoptopenjdk14 --cask
 java -version
 
+# ----- TASK MANAGEMENT ----- #
 ## Things 3
 mas install 904280696
+
+# ----- IDEs ----- #
+
+## Pycharm (not used)
+# brew install pycharm --cask
+
+## VS Code
+# brew install visual-studio-code --cask
 
 ## Neovim
 xcode-select --install
@@ -189,3 +241,8 @@ brew install xcodes --cask
 
 ## Android Studio
 brew install android-studio --cask
+
+## SQL
+# sqlit lazygit-esque TUI for SQL
+uv tool install sqlit-tui
+uv tool install 'sqlit-tui[ssh]'
